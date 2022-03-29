@@ -68,6 +68,7 @@ img {
     align-items: center;
     justify-content: space-evenly;
     background-color: black;
+    padding: 1rem;
 }
 
 @media (max-width: 973px) {
@@ -144,11 +145,17 @@ img {
 
 .inscripciones {
     width: 40%;
+    transition: all 3s;
+}
+
+.main__index .inscripciones:hover{
+    width: 60%;
 }
 
 @media (max-width: 768px) {
     .inscripciones {
         width: 100%;
+        transition: none;
     }
 }
 
@@ -249,11 +256,37 @@ img {
 }
 
 /* CURSOS */
+
 .main__courses {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4rem;
+    animation-name: courses_background;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite;
+}
+
+@keyframes courses_background {
+    30% {
+        background-image: linear-gradient(90deg, rgba(255,255,255,0.4990371148459384) 0%, rgba(255,255,255,0.4990371148459384) 48%, rgba(255,255,255,0.4962359943977591) 85%),
+        url(https://png.pngtree.com/png-vector/20190306/ourlarge/pngtree-continuous-line-drawing-of-london-city-of-westminster-big-ben-clock-png-image_770819.jpg);
+        background-size: cover;
+    }
+
+    60% {
+        background-image: linear-gradient(90deg, rgba(255,255,255,0.4990371148459384) 0%, rgba(255,255,255,0.4990371148459384) 48%, rgba(255,255,255,0.4962359943977591) 85%),
+        url(https://i.etsystatic.com/15524348/r/il/4a44b0/2495284073/il_fullxfull.2495284073_5xbw.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    100% {
+        background-image: linear-gradient(90deg, rgba(255,255,255,0.4990371148459384) 0%, rgba(255,255,255,0.4990371148459384) 48%, rgba(255,255,255,0.4962359943977591) 85%),
+        url(https://www.kindpng.com/picc/m/70-705639_black-and-white-london-phone-booth-draw-london.png);
+        background-repeat: no-repeat;
+    }
 }
 
 .courses_for_kids h1 {
@@ -286,6 +319,16 @@ img {
     display: inline-block;
 }
 
+.adults_course {
+    transform: translate(5rem, 0.5rem);
+}
+
+.kinder_course,
+.children_course,
+.juniors_course {
+    transform: rotate(353deg);
+}
+
 @media (max-width: 994px) {
 
     .kinder_course,
@@ -294,6 +337,14 @@ img {
     .teens_course,
     .adults_course {
         width: 16rem;
+    }
+
+    .kinder_course,
+    .children_course,
+    .juniors_course,
+    .teens_course,
+    .adults_course {
+        transform: none;
     }
 }
 
@@ -306,6 +357,14 @@ img {
     .adults_course {
         width: 19rem;
         display: block;
+    }
+
+    .kinder_course,
+    .children_course,
+    .juniors_course,
+    .teens_course,
+    .adults_course {
+        transform: none;
     }
 }
 
