@@ -63,130 +63,40 @@ img {
 }
 
 /* NAV */
-.menu {
+.nav_index {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: black;
-    padding: 1rem;
-}
-
-@media (max-width: 973px) {
-    .nav__list {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .menu {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+    justify-content: center;
 }
 
 .header__logo {
-    height: 8rem;
-    width: 8rem;
-    background-color: black;
-}
-
-.nav__list {
-    display: flex;
-    gap: 4rem;
-    font-size: 1rem;
-}
-
-.submenu {
-    display: none;
-    position: absolute;
-}
-
-.nav__list li:hover .submenu {
-    display: block;
-}
-
-.submenu li a {
-    display: block;
-    margin-top: 0.8rem;
-}
-
-.nav__list li:hover {
-    border-bottom: 3px solid #70E000;
+    max-height: 8rem;
+    max-width: 8rem;
 }
 
 .whatsapp__logo img {
-    width: 12rem;
-    height: 5rem;
+    width: 10rem;
+    height: 4rem;
     position: fixed;
-    right: -5%;
+    right: -3%;
+    z-index: 1;
 }
 
-@media (max-width: 973px) {
+@media (max-width: 510px) {
     .whatsapp__logo img {
-        top: 80%;
+        display: none;
     }
 }
 
 /* MAIN INDEX*/
-
 .main__index {
-    display: flex;
-    padding: 2rem 3rem;
-    gap: 1rem;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-    .main__index {
-        flex-direction: column;
-    }
-}
-
-.inscripciones {
-    width: 40%;
-    transition: all 3s;
-}
-
-.main__index .inscripciones:hover{
-    width: 60%;
-}
-
-@media (max-width: 768px) {
-    .inscripciones {
-        width: 100%;
-        transition: none;
-    }
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 2px;
-}
-
-@media (max-width:768px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width:480px) {
-    .gallery {
-        grid-template-columns: 1fr;
-    }
-}
-
-.gallery img {
-    width: 100%;
+    padding: 2rem;
 }
 
 .welcome__text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 6rem 4rem;
+    padding: 6rem 6rem;
     gap: 2rem;
     line-height: 1.8rem;
     font-size: 1.6rem;
@@ -231,6 +141,7 @@ img {
     align-items: center;
     color: var(--Color_Two);
     background-color: black;
+    padding-top: 2rem;
 }
 
 .footer p {
@@ -242,11 +153,11 @@ img {
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    margin-top: 1rem;
 }
 
 .footer h5 {
     align-self: flex-end;
+    font-size: 0.6rem;
 }
 
 @media (max-width: 768px) {
@@ -256,58 +167,24 @@ img {
 }
 
 /* CURSOS */
-
-.main__courses {
+.title_courses {
+    padding: 3rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4rem;
-    animation-name: courses_background;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count:infinite;
-}
-
-@keyframes courses_background {
-    30% {
-        background-image: linear-gradient(90deg, rgba(255,255,255,0.4990371148459384) 0%, rgba(255,255,255,0.4990371148459384) 48%, rgba(255,255,255,0.4962359943977591) 85%),
-        url(https://png.pngtree.com/png-vector/20190306/ourlarge/pngtree-continuous-line-drawing-of-london-city-of-westminster-big-ben-clock-png-image_770819.jpg);
-        background-size: cover;
-    }
-
-    60% {
-        background-image: linear-gradient(90deg, rgba(255,255,255,0.4990371148459384) 0%, rgba(255,255,255,0.4990371148459384) 48%, rgba(255,255,255,0.4962359943977591) 85%),
-        url(https://i.etsystatic.com/15524348/r/il/4a44b0/2495284073/il_fullxfull.2495284073_5xbw.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    100% {
-        background-image: linear-gradient(90deg, rgba(255,255,255,0.4990371148459384) 0%, rgba(255,255,255,0.4990371148459384) 48%, rgba(255,255,255,0.4962359943977591) 85%),
-        url(https://www.kindpng.com/picc/m/70-705639_black-and-white-london-phone-booth-draw-london.png);
-        background-repeat: no-repeat;
-    }
-}
-
-.courses_for_kids h1 {
+    justify-content: center;
     font-size: 3rem;
-    padding: 2rem 2rem;
+    font-family: var(--Fuente_Titulos);
 }
 
-.courses_for_kids h2 {
-    font-size: 1.7rem;
-    text-align: center;
-    padding: 2rem 2rem;
-    color: #70E000;
-}
-
-.courses_for_kids p {
-    text-align: center;
-    font-size: 1.5rem;
-    padding: 2rem;
-    line-height: 1.3rem;
+.accordion {
     font-family: var(--Fuente_Principal);
-    color: black;
+    font-size: 1.5rem;
+    text-align: justify;
+    padding: 3rem;
+}
+
+.accordion-button {
+    color: #70E000;
+    background-color: black;
 }
 
 .kinder_course,
@@ -315,660 +192,477 @@ img {
 .juniors_course,
 .teens_course,
 .adults_course {
-    width: 20rem;
-    display: inline-block;
+    max-width: 20rem;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
-.adults_course {
-    transform: translate(5rem, 0.5rem);
-}
-
-.kinder_course,
-.children_course,
-.juniors_course {
-    transform: rotate(353deg);
-}
-
-@media (max-width: 994px) {
-
-    .kinder_course,
-    .children_course,
-    .juniors_course,
-    .teens_course,
-    .adults_course {
-        width: 16rem;
-    }
-
-    .kinder_course,
-    .children_course,
-    .juniors_course,
-    .teens_course,
-    .adults_course {
-        transform: none;
-    }
-}
-
-@media (max-width: 797px) {
-
-    .kinder_course,
-    .children_course,
-    .juniors_course,
-    .teens_course,
-    .adults_course {
-        width: 19rem;
-        display: block;
-    }
-
-    .kinder_course,
-    .children_course,
-    .juniors_course,
-    .teens_course,
-    .adults_course {
-        transform: none;
-    }
-}
-
-@media (max-width: 317px) {
+@media (max-width: 510px) {
     .kinder_course,
     .children_course,
     .juniors_course,
     .teens_course,
     .adults_course {
         width: 12rem;
-        display: block;
+    }
+    .accordion {
+        font-size: 1rem;
+        padding: 3rem;
+        text-align: center;
+    }
     }
 
-    .courses_for_kids h1 {
-        font-size: 1.2rem;
-    }
-}
+    @media (max-width: 382px) {
+        .kinder_course,
+        .children_course,
+        .juniors_course,
+        .teens_course,
+        .adults_course {
+            width: 9rem;
+        }
+        .accordion {
+            font-size: 1rem;
+            padding: 3rem;
+            text-align: center;
+        }
+        }
+
+        @media (max-width: 332px) {
+            .kinder_course,
+            .children_course,
+            .juniors_course,
+            .teens_course,
+            .adults_course {
+                width: 8rem;
+                padding: none;
+            }
+            .courses_for_kids h1 {
+                font-size: 1.2rem;
+            }
+        }
 
 /* EXÁMENES */
-
-.contenedora__exams {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 0.8fr);
-    grid-column-gap: 5rem;
-    grid-row-gap: 3rem;
-    margin: 2rem 2rem;
-    grid-template-areas:
-        "int_info int_info2 int_iframes"
-        "int_info3 int_info4 int_iframes";
-}
-
-.contenedora__exams h2 {
-    color: #70E000;
-    margin-top: 1rem;
-    background-color: black;
-}
-
-.contenedora__exams p {
-    line-height: 2rem;
-    margin-top: 1rem;
+.exams {
+    padding: 3rem;
     font-family: var(--Fuente_Principal);
-    font-size: 1.3rem;
-}
+        }
 
-.int_info {
-    grid-area: int_info;
-}
-
-.int_info h1 {
-    font-size: 1.5rem;
-}
-
-.int_info2 {
-    grid-area: int_info2;
-    margin-top: 6rem;
-}
-
-.int_info3 {
-    grid-area: int_info3;
-}
-
-.int_info4 {
-    grid-area: int_info4;
-}
-
-.int_iframes {
-    grid-area: int_iframes;
-}
-
-.int_iframes h1 {
-    margin: 1rem;
-}
-
-.int_iframes a {
-    color: #70E000;
-    font-size: 1.4rem;
-    line-height: 2rem;
-}
-
-.int_iframes a:hover {
-    border-bottom: 3px solid black;
-}
-
-@media (max-width: 973px) {
-    .contenedora__exams {
-        display: grid;
-        grid-template-columns: repeat(2, 0.7fr);
-        grid-template-rows: repeat(3, 0.1fr);
-        grid-column-gap: 5rem;
-        margin: 2rem 2rem;
-        grid-template-areas:
-            "int_info int_info2"
-            "int_info3 int_info4"
-            ". int_iframes";
-    }
-}
-
-@media (max-width:800px) {
-    .contenedora__exams {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(5, 0.3fr);
-        margin: 2rem 2rem;
-        grid-template-areas:
-            "int_info"
-            "int_info2"
-            "int_info3"
-            "int_info4"
-            "int_iframes";
-    }
-}
-
-/*CONOCENOS*/
-
-.main__conocenos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 0.8fr);
-    column-gap: 4rem;
-    row-gap: 6rem;
-    margin: 2rem 2rem;
-    grid-template-areas:
-        "meet_us meet_us meet_us meet_us"
-        "mister__hodinka mister__hodinka mister__guardeno mister__guardeno";
-}
-
-.conocenos__school {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.meet_us {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    grid-area: meet_us;
-}
-
-.meet_us p {
-    font-family: var(--Fuente_Principal);
-}
-
-.mister__hodinka {
-    display: flex;
-    grid-area: mister__hodinka;
-    align-items: center;
-    gap: 2rem;
-}
-
-.mister__hodinka p {
-    font-family: var(--Fuente_Principal);
-}
-
-.mister__hodinka h1 {
-    color: #70E000;
-    border: solid 1px black;
-    border-style: dashed;
-}
-
-.mister__guardeno {
-    display: flex;
-    grid-area: mister__guardeno;
-    align-items: center;
-    gap: 2rem;
-}
-
-.mister__guardeno p {
-    font-family: var(--Fuente_Principal);
-}
-
-.institute_pic {
-    max-width: 30rem;
-}
-
-.classroom_pic {
-    max-width: 30rem;
-}
-
-.professor_hodinka {
-    max-width: 15rem;
-    max-height: 15rem;
-}
-
-.professor_guardeno {
-    max-width: 15rem;
-    max-height: 15rem;
-}
-
-@media (max-width: 973px) {
-    .main__conocenos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 0.5fr);
-        margin: 2rem 2rem;
-        grid-template-areas:
-            "meet_us meet_us"
-            "mister__hodinka mister__guardeno"
-            "mister__hodinka mister__guardeno";
-    }
-
-    .mister__guardeno {
-        flex-direction: column;
-    }
-
-    .mister__hodinka {
-        flex-direction: column;
-    }
-
-    .conocenos__school {
-        flex-direction: column;
-    }
-
-    .institute_pic {
-        max-width: 25rem;
-    }
-
-    .classroom_pic {
-        max-width: 25rem;
-    }
-}
-
-@media (max-width:650px) {
-    .main__conocenos {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 3, 1fr;
-        margin: 2rem 2rem;
-        grid-template-areas:
-            "meet_us"
-            "mister__hodinka"
-            "mister__guardeno";
-    }
-
-    .mister__guardeno {
-        flex-direction: column;
-    }
-
-    .mister__hodinka {
-        flex-direction: column;
-    }
-
-    .meet_us {
-        flex-direction: column;
-    }
-}
-
-/*STAFF*/
-.main_staff {
-    display: grid;
-    grid-template-columns: repeat(3, 1.2fr);
-    grid-template-rows: repeat(3, 0.3fr);
-    row-gap: 4rem;
-    column-gap: 3rem;
-    margin: 2rem 2rem;
-    grid-template-areas:
-        "titulo_staff titulo_staff titulo_staff"
-        "teacher_staff1 teacher_staff2 aside_staff"
-        "teacher_staff3 teacher_staff4 aside_staff";
-}
-
-.titulo_staff {
-    grid-area: titulo_staff;
-}
-
-.teacher_staff1 {
-    grid-area: teacher_staff1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--Fuente_Principal);
-    padding: 1rem;
-}
-
-.teacher_staff2 {
-    grid-area: teacher_staff2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--Fuente_Principal);
-    padding: 1rem;
-}
-
-.teacher_staff3 {
-    grid-area: teacher_staff3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--Fuente_Principal);
-    padding: 1rem;
-}
-
-.teacher_staff4 {
-    grid-area: teacher_staff4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--Fuente_Principal);
-    padding: 1rem;
-}
-
-.aside_staff {
-    grid-area: aside_staff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-height: 60%;
-    padding: 2rem 2rem;
-    color: black;
-    border: solid 2px black;
-    border-style: dashed;
-    background: linear-gradient(to right, #add100, #7b920a);
-    ;
-}
-
-.teacher1 {
-    max-width: 13rem;
-}
-
-.teacher_emoji {
-    max-width: 8rem;
-}
-
-@media (max-width: 973px) {
-    .main_staff {
-        display: grid;
-        grid-template-columns: repeat(2, 1.2fr);
-        grid-template-rows: repeat(4, 0.3fr);
-        row-gap: 4rem;
-        column-gap: 3rem;
-        margin: 2rem 2rem;
-        grid-template-areas:
-            "titulo_staff titulo_staff"
-            "teacher_staff1 teacher_staff2"
-            "teacher_staff3 teacher_staff4"
-            "aside_staff aside_staff";
-    }
-}
-
-@media (max-width: 650px) {
-    .main_staff {
-        display: grid;
-        grid-template-columns: 1, 1fr;
-        grid-template-rows: repeat(6, 0.3fr);
-        row-gap: 4rem;
-        column-gap: 3rem;
-        margin: 2rem 2rem;
-        grid-template-areas:
-            "titulo_staff"
-            "teacher_staff1"
-            "teacher_staff2"
-            "teacher_staff3"
-            "teacher_staff4"
-            "aside_staff";
-    }
-}
-
-@media (max-width: 371px) {
-    .main_staff {
-        display: grid;
-        grid-template-columns: 1, 1fr;
-        grid-template-rows: repeat(6, 0.3fr);
-        row-gap: 4rem;
-        column-gap: 3rem;
-        margin: 2rem 2rem;
-        grid-template-areas:
-            "titulo_staff"
-            "teacher_staff1"
-            "teacher_staff2"
-            "teacher_staff3"
-            "teacher_staff4"
-            "aside_staff";
-    }
-
-    .teacher1 {
-        max-width: 8rem;
-    }
-
-    .teacher_emoji {
-        max-width: 5rem;
-    }
-
-    .aside_staff {
-        height: 100%;
-        background: none;
-        border: none;
-    }
-
-    .teacher_staff1 p {
-        font-size: 1rem;
-    }
-
-    .teacher_staff2 p {
-        font-size: 1rem;
-    }
-
-    .teacher_staff3 p {
-        font-size: 1rem;
-    }
-
-    .teacher_staff4 p {
-        font-size: 1rem;
-    }
-
-    .aside_staff p {
-        font-size: 1rem;
-    }
-}
-
-/*VALORES*/
-
-.main__values h1 {
-    font-size: 3rem;
-    margin-top: 3rem;
-    text-align: center;
-    color: #70E000;
-}
-
-.main__values p {
-    font-size: 1.5rem;
-    margin-top: 3rem;
-    text-align: justify;
-    font-family: var(--Fuente_Principal);
-    padding: 2rem;
-    line-height: 2rem;
-}
-
-.valores_green {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 6rem 4rem;
-    gap: 2rem;
-    line-height: 1.8rem;
-    font-size: 1.6rem;
-    font-family: var(--Fuente_Principal);
-    text-align: justify;
-    background-image: linear-gradient(83deg, rgba(0, 0, 0, 0.5802696078431373) 0%, rgba(0, 0, 0, 0.5550595238095238) 100%),
-        url(https://wikieconomica.com/wp-content/uploads/2020/10/1-11.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.valores_green h1 {
-    color: #70E000;
-}
-
-.valores_green ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
-}
-
-.valores_green li {
-    list-style: circle;
-    color: antiquewhite;
-}
-
-@media (max-width:534px) {
-    .valores_green h1 {
-        font-size: 1.4rem;
-    }
-
-    .main__values p {
-        font-size: 1.2rem;
-    }
-}
-
-/*CONTACTO*/
-.main__contacto {
-    background-image: linear-gradient(83deg, rgba(0, 0, 0, 0.5802696078431373) 0%, rgba(0, 0, 0, 0.5550595238095238) 100%), url(https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.form_contacto {
-    margin: 3rem 2rem;
-    padding: 2rem;
-    max-width: 500px;
-    box-sizing: border-box;
-    border-radius: 7px;
-    background: linear-gradient(to right, #d3cce3, #e9e4f0);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: medium;
-    line-height: 2rem;
-}
-
-.contacto_title {
-    color: white;
-    margin: 3rem;
-}
-
-input,
-textarea,
-label {
-    width: 100%;
-    margin-top: 1.5rem;
-    align-items: center;
-}
-
-.boton_submit {
-    background-color: var(--Color_Two);
-    color: black;
+.exams_title{
     font-family: var(--Fuente_Titulos);
-    font-size: 1.2rem;
-    padding: 0.5rem;
-}
-
-.boton_submit:hover {
-    cursor: pointer;
-}
-
-@media (max-width: 976px) {
-    .main__contacto {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 560px) {
-    .form_contacto {
-        width: 100%;
-        margin: 0;
-    }
-}
-
-@media (max-width: 315px) {
-    .form_contacto {
-        width: 100%;
-        margin: 0;
-    }
-}
-
-.map {
-    flex-direction: column;
-}
-
-.sede_title {
-    color: white;
-    margin: 3rem;
-}
-
-.iframe_contacto {
-    width: 500px;
-    height: 450px;
-}
-
-@media (max-width:1200px) {
-    .iframe_contacto {
-        width: 400px;
-        height: 400px;
-        margin-left: 4rem;
-    }
-}
-
-@media (max-width:975px) {
-    .iframe_contacto {
-        width: 480px;
-        height: 480px;
-    }
-}
-
-@media (max-width:578px) {
-    .iframe_contacto {
-        width: 300px;
-        height: 300px;
-        margin: 0;
-    }
-}
-
-.contact_us {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: black;
-    gap: 2rem;
+    font-size: 2.8rem;
     padding: 3rem;
 }
 
-.icono_parrafo_contactus {
+    .subtitle_exams {
+        font-family: var(--Fuente_Titulos);
+        background-color: black;
+        color: #70E000;
+    }
+
+    .exams_title2{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    color: #70E000;
-}
+    gap: 2.2rem;
+    }
 
-.icono_parrafo_contactus .fa-brands,
-.fa-solid {
-    font-size: 2rem;
-    align-items: center;
-}
+    .exams_title2 h1 {
+        font-size: 1.4rem;
+        text-align: center;
+        font-family: var(--Fuente_Titulos);
+    }
 
-@media (max-width: 430px) {
-    .icono_parrafo_contactus p {
-        font-size: 1.2rem;
+        .int_iframes a {
+            color: #70E000;
+            font-size: 1.3rem;
+            line-height: 2rem;
+        }
+
+        .int_iframes a:hover {
+            border-bottom: 3px solid black;
+        }
+
+@media (max-width: 970px) {
+    .video_exams {
+        width: 15rem;
     }
 }
+
+@media (max-width: 763px) {
+    .video_exams {
+        width: 25rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .video_exams {
+        width: 18rem;
+    }
+
+    .exams_title {
+        font-size: 2rem;
+        }
+}
+
+
+/*CONOCENOS*/
+.title_meetus {
+    padding: 3rem;
+    font-family: var(--Fuente_Titulos);
+    font-size: 3rem;
+}
+
+    .conocenos__school {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+            gap: 2rem;
+            font-family: var(--Fuente_Principal);
+        }
+
+    .mister__hodinka {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            padding: 3rem;
+        }
+
+        .mister__hodinka p {
+            font-family: var(--Fuente_Principal);
+        }
+
+        .mister__guardeno {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            padding: 6rem;
+        }
+
+        .mister__guardeno p {
+            font-family: var(--Fuente_Principal);
+        }
+
+        .institute_pic {
+            max-width: 20rem;
+        }
+
+        .classroom_pic {
+            max-width: 20rem;
+        }
+
+        .professor_hodinka {
+            max-width: 15rem;
+            max-height: 15rem;
+        }
+
+        .professor_guardeno {
+            max-width: 15rem;
+            max-height: 15rem;
+        }
+
+        @media (max-width: 910px) {
+            .institute_pic {
+                max-width: 16rem;
+            }
+            .classroom_pic {
+                max-width: 16rem;
+            }
+        }
+
+        @media (max-width: 785px) {
+            .conocenos__school {
+                display: flex;
+                flex-direction: column;
+                }
+            }
+
+        /*STAFF*/
+
+        .teacher_staff1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: var(--Fuente_Principal);
+            padding: 3rem;
+        }
+
+        .teacher_staff2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: var(--Fuente_Principal);
+            padding: 3rem;
+        }
+
+        .teacher_staff3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: var(--Fuente_Principal);
+            padding: 3rem;
+        }
+
+        .teacher_staff4 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: var(--Fuente_Principal);
+            padding: 3rem;
+        }
+
+        .aside_staff {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: var(--Fuente_Principal);
+            max-height: 60%;
+            padding: 2rem 2rem;
+            color: black;
+            border: solid 2px black;
+            border-style: dashed;
+            background: linear-gradient(to right, #add100, #7b920a);
+            ;
+        }
+
+        .teacher1 {
+            max-width: 13rem;
+        }
+
+        .teacher_emoji {
+            max-width: 8rem;
+        }
+
+
+        @media (max-width: 371px) {
+            .teacher_emoji {
+                max-width: 5rem;
+            }
+
+            .aside_staff {
+                height: 100%;
+                background: none;
+                border: none;
+            }
+
+            .teacher_staff1 p {
+                font-size: 1rem;
+            }
+
+            .teacher_staff2 p {
+                font-size: 1rem;
+            }
+
+            .teacher_staff3 p {
+                font-size: 1rem;
+            }
+
+            .teacher_staff4 p {
+                font-size: 1rem;
+            }
+
+            .aside_staff p {
+                font-size: 1rem;
+            }
+        }
+
+        /*VALORES*/
+
+        .main__values h1 {
+            font-size: 3rem;
+            margin-top: 3rem;
+            text-align: center;
+            color: #70E000;
+        }
+
+        .main__values p {
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            text-align: justify;
+            font-family: var(--Fuente_Principal);
+            padding: 2rem;
+            line-height: 2rem;
+        }
+
+        .valores_green {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 6rem 4rem;
+            gap: 2rem;
+            line-height: 1.8rem;
+            font-size: 1.6rem;
+            font-family: var(--Fuente_Principal);
+            text-align: justify;
+            background-image: linear-gradient(83deg, rgba(0, 0, 0, 0.5802696078431373) 0%, rgba(0, 0, 0, 0.5550595238095238) 100%),
+                url(https://wikieconomica.com/wp-content/uploads/2020/10/1-11.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .valores_green h1 {
+            color: #70E000;
+        }
+
+        .valores_green ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .valores_green li {
+            list-style: circle;
+            color: antiquewhite;
+        }
+
+        @media (max-width:534px) {
+            .valores_green h1 {
+                font-size: 1.4rem;
+            }
+
+            .main__values p {
+                font-size: 1.2rem;
+            }
+        }
+
+        /*CONTACTO*/
+        .main__contacto {
+            background-image: linear-gradient(83deg, rgba(0, 0, 0, 0.5802696078431373) 0%, rgba(0, 0, 0, 0.5550595238095238) 100%), url(https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .form_contacto {
+            margin: 3rem 2rem;
+            padding: 2rem;
+            max-width: 500px;
+            box-sizing: border-box;
+            border-radius: 7px;
+            background: linear-gradient(to right, #d3cce3, #e9e4f0);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: medium;
+            line-height: 2rem;
+        }
+
+        .contacto_title {
+            color: white;
+            margin: 3rem;
+        }
+
+        input,
+        textarea,
+        label {
+            width: 100%;
+            margin-top: 1.5rem;
+            align-items: center;
+        }
+
+        .boton_submit {
+            background-color: var(--Color_Two);
+            color: black;
+            font-family: var(--Fuente_Titulos);
+            font-size: 1.2rem;
+            padding: 0.5rem;
+        }
+
+        .boton_submit:hover {
+            cursor: pointer;
+        }
+
+        @media (max-width: 976px) {
+            .main__contacto {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .form_contacto {
+                width: 100%;
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 315px) {
+            .form_contacto {
+                width: 100%;
+                margin: 0;
+            }
+        }
+
+        .map {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .sede_title {
+            color: white;
+            padding: 3rem;
+            font-size: 1.5rem;
+        }
+
+        .iframe_contacto {
+            width: 500px;
+            height: 450px;
+        }
+
+        @media (max-width:1200px) {
+            .iframe_contacto {
+                width: 400px;
+                height: 400px;
+                margin-left: 4rem;
+            }
+        }
+
+        @media (max-width:975px) {
+            .iframe_contacto {
+                width: 480px;
+                height: 480px;
+            }
+        }
+
+        @media (max-width:578px) {
+            .iframe_contacto {
+                width: 300px;
+                height: 300px;
+                margin: 0;
+            }
+        }
+
+        .contact_us {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: black;
+            padding: 2rem;
+        }
+
+        .icono_parrafo_contactus {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            color: #70E000;
+        }
+
+        .icono_parrafo_contactus .fa-brands,
+        .fa-solid {
+            font-size: 2.5rem;
+            align-items: center;
+        }
+
+        @media (max-width: 430px) {
+            .icono_parrafo_contactus p {
+                font-size: 1.2rem;
+            }
+        }
