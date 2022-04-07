@@ -1,0 +1,144 @@
+.main__index {
+    display: flex;
+    padding: 2rem 3rem;
+    gap: 1rem;
+    align-items: center;
+    .inscripciones {
+        width: 40%;
+        transition: all 3s;
+        &:hover{
+            width: 60%;
+        }
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 2px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main__index {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .inscripciones {
+        width: 100%;
+        transition: none;
+    }
+}
+
+@media (max-width:768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+.welcome__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 4rem;
+    gap: 2rem;
+    line-height: 1.8rem;
+    font-size: 1.6rem;
+    font-family: $Fuente_Principal;
+    text-align: justify;
+    background-image: linear-gradient(83deg, rgba(0, 0, 0, 0.5802696078431373) 0%, rgba(0, 0, 0, 0.5550595238095238) 100%),
+        url(https://static.vecteezy.com/system/resources/previews/002/437/811/non_2x/still-life-on-green-school-board-background-free-photo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+        font-size: 2rem;
+        align-self: center;
+        color: $Color_Two;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    li {
+    list-style: circle;
+    color: antiquewhite;
+}
+}
+
+
+@media (max-width: 768px) {
+    .welcome__text {
+        align-items: center;
+        font-size: 1.4rem;
+    }
+}
+
+/*VALORES*/
+
+.main__values {
+    h1 {
+        font-size: 3rem;
+        margin-top: 3rem;
+        text-align: center;
+        color: #70E000;
+    }
+    p {
+        font-size: 1.5rem;
+        margin-top: 3rem;
+        text-align: justify;
+        font-family: $Fuente_Principal;
+        padding: 2rem;
+        line-height: 2rem;
+    }
+}
+
+.valores_green {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 4rem;
+    gap: 2rem;
+    line-height: 1.8rem;
+    font-size: 1.6rem;
+    font-family: $Fuente_Principal;
+    text-align: justify;
+    background-image: linear-gradient(83deg, rgba(0, 0, 0, 0.5802696078431373) 0%, rgba(0, 0, 0, 0.5550595238095238) 100%),
+        url(https://wikieconomica.com/wp-content/uploads/2020/10/1-11.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    h1 {
+        color: $Color_Two;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    li {
+        list-style: circle;
+        color: antiquewhite;
+    }
+}
+
+@media (max-width:534px) {
+    .valores_green h1 {
+        font-size: 1.4rem;
+    }
+
+    .main__values p {
+        font-size: 1.2rem;
+    }
+}

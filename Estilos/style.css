@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: #f0ead2;
+  text-decoration: none; }
+
+html {
+  font-size: 62, 5%; }
+
+p {
+  font-size: 1.6rem;
+  text-align: justify; }
+
+body {
+  font-family: 'Balsamiq Sans'; }
+
+li {
+  list-style: none; }
+
+img {
+  display: block; }
+
+/* HEADER */
+.pre__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 0.5rem 0rem;
+  background-color: #70E000; }
+  .pre__header p {
+    font-family: "Josefin Sans";
+    color: black;
+    font-size: 1rem; }
+
+/* NAV */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: black;
+  padding: 1rem; }
+  .menu .header__logo {
+    height: 8rem;
+    width: 8rem;
+    background-color: black; }
+  .menu .nav__list {
+    display: flex;
+    gap: 4rem;
+    font-size: 1rem; }
+    .menu .nav__list li:hover {
+      border-bottom: 3px solid #70E000; }
+
+/* Whatsapp sticky logo */
+.whatsapp__logo img {
+  width: 12rem;
+  height: 5rem;
+  position: fixed;
+  right: -5%; }
+
+@media (max-width: 768px) {
+  .pre__header {
+    flex-direction: column;
+    gap: 0.7rem;
+    padding-top: 1rem; } }
+
+@media (max-width: 973px) {
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; } }
+
+@media (max-width: 973px) {
+  .whatsapp__logo img {
+    top: 80%; } }
+
+.main__index {
+  display: flex;
+  padding: 2rem 3rem;
+  gap: 1rem;
+  align-items: center; }
+  .main__index .inscripciones {
+    width: 40%;
+    transition: all 3s; }
+    .main__index .inscripciones:hover {
+      width: 60%; }
+  .main__index .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 2px; }
+    .main__index .gallery img {
+      width: 100%; }
+
+@media (max-width: 768px) {
+  .main__index {
+    flex-direction: column; } }
+
+@media (max-width: 768px) {
+  .inscripciones {
+    width: 100%;
+    transition: none; } }
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr; } }
+
+.welcome__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 4rem;
+  gap: 2rem;
+  line-height: 1.8rem;
+  font-size: 1.6rem;
+  font-family: "Josefin Sans";
+  text-align: justify;
+  background-image: linear-gradient(83deg, rgba(0, 0, 0, 0.58027) 0%, rgba(0, 0, 0, 0.55506) 100%), url(https://static.vecteezy.com/system/resources/previews/002/437/811/non_2x/still-life-on-green-school-board-background-free-photo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .welcome__text h1 {
+    font-size: 2rem;
+    align-self: center;
+    color: #70E000; }
+  .welcome__text ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem; }
+  .welcome__text li {
+    list-style: circle;
+    color: antiquewhite; }
+
+@media (max-width: 768px) {
+  .welcome__text {
+    align-items: center;
+    font-size: 1.4rem; } }
+
+/*VALORES*/
+.main__values h1 {
+  font-size: 3rem;
+  margin-top: 3rem;
+  text-align: center;
+  color: #70E000; }
+
+.main__values p {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  text-align: justify;
+  font-family: "Josefin Sans";
+  padding: 2rem;
+  line-height: 2rem; }
+
+.valores_green {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 4rem;
+  gap: 2rem;
+  line-height: 1.8rem;
+  font-size: 1.6rem;
+  font-family: "Josefin Sans";
+  text-align: justify;
+  background-image: linear-gradient(83deg, rgba(0, 0, 0, 0.58027) 0%, rgba(0, 0, 0, 0.55506) 100%), url(https://wikieconomica.com/wp-content/uploads/2020/10/1-11.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .valores_green h1 {
+    color: #70E000; }
+  .valores_green ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem; }
+  .valores_green li {
+    list-style: circle;
+    color: antiquewhite; }
+
+@media (max-width: 534px) {
+  .valores_green h1 {
+    font-size: 1.4rem; }
+  .main__values p {
+    font-size: 1.2rem; } }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #70E000;
+  background-color: black; }
+  .footer p {
+    font-size: 1rem; }
+  .footer h5 {
+    align-self: flex-end; }
+  .footer .social__media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem; }
+
+@media (max-width: 768px) {
+  .footer {
+    gap: 1rem; } }

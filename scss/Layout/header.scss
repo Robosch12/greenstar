@@ -1,0 +1,74 @@
+/* HEADER */
+.pre__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 0.5rem 0rem;
+    background-color: $Color_Two;
+    p {
+        font-family: $Fuente_Principal;
+        color: black;
+        font-size: 1rem;
+    }
+}
+
+/* NAV */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black;
+    padding: 1rem;
+    .header__logo {
+        height: 8rem;
+        width: 8rem;
+        background-color: black;
+    }
+    .nav__list {
+        display: flex;
+        gap: 4rem;
+        font-size: 1rem;
+        li:hover {
+            border-bottom: 3px solid #70E000;
+        }
+    }
+}
+
+/* Whatsapp sticky logo */
+
+.whatsapp__logo img {
+    width: 12rem;
+    height: 5rem;
+    position: fixed;
+    right: -5%;
+}
+
+@media (max-width: 768px) {
+    .pre__header {
+        flex-direction: column;
+        gap: 0.7rem;
+        padding-top: 1rem;
+    }
+}
+
+@media (max-width: 973px) {
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 973px) {
+    .whatsapp__logo img {
+        top: 80%;
+    }
+}
