@@ -97,20 +97,6 @@ img {
     font-size: 1rem;
 }
 
-.submenu {
-    display: none;
-    position: absolute;
-}
-
-.nav__list li:hover .submenu {
-    display: block;
-}
-
-.submenu li a {
-    display: block;
-    margin-top: 0.8rem;
-}
-
 .nav__list li:hover {
     border-bottom: 3px solid #70E000;
 }
@@ -223,6 +209,66 @@ img {
     }
 }
 
+/*VALORES*/
+
+.main__values h1 {
+    font-size: 3rem;
+    margin-top: 3rem;
+    text-align: center;
+    color: #70E000;
+}
+
+.main__values p {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    text-align: justify;
+    font-family: var(--Fuente_Principal);
+    padding: 2rem;
+    line-height: 2rem;
+}
+
+.valores_green {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6rem 4rem;
+    gap: 2rem;
+    line-height: 1.8rem;
+    font-size: 1.6rem;
+    font-family: var(--Fuente_Principal);
+    text-align: justify;
+    background-image: linear-gradient(83deg, rgba(0, 0, 0, 0.5802696078431373) 0%, rgba(0, 0, 0, 0.5550595238095238) 100%),
+        url(https://wikieconomica.com/wp-content/uploads/2020/10/1-11.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.valores_green h1 {
+    color: #70E000;
+}
+
+.valores_green ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.valores_green li {
+    list-style: circle;
+    color: antiquewhite;
+}
+
+@media (max-width:534px) {
+    .valores_green h1 {
+        font-size: 1.4rem;
+    }
+
+    .main__values p {
+        font-size: 1.2rem;
+    }
+}
+
 /*FOOTER INDEX*/
 
 .footer {
@@ -256,16 +302,27 @@ img {
 }
 
 /* CURSOS */
-
 .main__courses {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4rem;
     animation-name: courses_background;
     animation-duration: 10s;
     animation-timing-function: linear;
     animation-iteration-count:infinite;
+}
+
+.main__courses h1{
+    font-size: 4rem;
+    text-align: start;
+    padding: 3rem;
+    font-family: var(--Fuente_Titulos);
+}
+
+.main__courses h2{
+    font-size: 1.7rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: black;
+    color: #70E000;
+    font-family: var(--Fuente_Titulos);
 }
 
 @keyframes courses_background {
@@ -289,23 +346,25 @@ img {
     }
 }
 
-.courses_for_kids h1 {
-    font-size: 3rem;
-    padding: 2rem 2rem;
+.courses_for_kids {
+    display: flex;
+    align-items: center;
 }
 
-.courses_for_kids h2 {
-    font-size: 1.7rem;
+.courses_for_kids h3 {
+    font-size: 1.4rem;
     text-align: center;
-    padding: 2rem 2rem;
+    padding: 1rem;
     color: #70E000;
+    background-color: white;
+    text-decoration: overline underline;
 }
 
 .courses_for_kids p {
-    text-align: center;
+    text-align: justify;
     font-size: 1.5rem;
     padding: 2rem;
-    line-height: 1.3rem;
+    line-height: 2rem;
     font-family: var(--Fuente_Principal);
     color: black;
 }
@@ -317,26 +376,25 @@ img {
 .adults_course {
     width: 20rem;
     display: inline-block;
-}
-
-.adults_course {
-    transform: translate(5rem, 0.5rem);
+    padding: 3rem;
 }
 
 .kinder_course,
 .children_course,
-.juniors_course {
+.juniors_course,
+.teens_course,
+.adults_course {
     transform: rotate(353deg);
 }
 
-@media (max-width: 994px) {
-
+@media (max-width: 920px) {
     .kinder_course,
     .children_course,
     .juniors_course,
     .teens_course,
     .adults_course {
         width: 16rem;
+        margin: 0 auto;
     }
 
     .kinder_course,
@@ -345,6 +403,10 @@ img {
     .teens_course,
     .adults_course {
         transform: none;
+    }
+
+    .courses_for_kids {
+        flex-direction: column;
     }
 }
 
@@ -356,7 +418,6 @@ img {
     .teens_course,
     .adults_course {
         width: 19rem;
-        display: block;
     }
 
     .kinder_course,
@@ -368,18 +429,17 @@ img {
     }
 }
 
-@media (max-width: 317px) {
+@media (max-width: 378px) {
     .kinder_course,
     .children_course,
     .juniors_course,
     .teens_course,
     .adults_course {
         width: 12rem;
-        display: block;
     }
 
-    .courses_for_kids h1 {
-        font-size: 1.2rem;
+    .main__courses h1 {
+        font-size: 1.8rem;
     }
 }
 
@@ -390,8 +450,8 @@ img {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 0.8fr);
     grid-column-gap: 5rem;
-    grid-row-gap: 3rem;
-    margin: 2rem 2rem;
+    grid-row-gap: 5rem;
+    padding: 2rem;
     grid-template-areas:
         "int_info int_info2 int_iframes"
         "int_info3 int_info4 int_iframes";
@@ -415,12 +475,19 @@ img {
 }
 
 .int_info h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: var(--Fuente_Titulos);
+    padding: 2rem;
 }
 
 .int_info2 {
     grid-area: int_info2;
-    margin-top: 6rem;
+    margin-top: 4rem;
+}
+
+.cam_int_exams{
+    max-width: 20rem;
 }
 
 .int_info3 {
@@ -433,6 +500,10 @@ img {
 
 .int_iframes {
     grid-area: int_iframes;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .int_iframes h1 {
@@ -449,17 +520,35 @@ img {
     border-bottom: 3px solid black;
 }
 
+@media (max-width: 1181px) {
+    .contenedora__exams {
+        display: grid;
+        grid-template-columns: repeat(2, 0.7fr);
+        grid-template-rows: repeat(3, 0.1fr);
+        grid-template-areas:
+            "int_info int_info2"
+            "int_info3 int_info4"
+            ". int_iframes";
+    }
+
+    .cam_int_exams{
+        max-width: 15rem;
+    }
+}
+
 @media (max-width: 973px) {
     .contenedora__exams {
         display: grid;
         grid-template-columns: repeat(2, 0.7fr);
         grid-template-rows: repeat(3, 0.1fr);
-        grid-column-gap: 5rem;
-        margin: 2rem 2rem;
         grid-template-areas:
             "int_info int_info2"
             "int_info3 int_info4"
             ". int_iframes";
+    }
+
+    .cam_int_exams{
+        max-width: 15rem;
     }
 }
 
@@ -468,13 +557,17 @@ img {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 0.3fr);
-        margin: 2rem 2rem;
         grid-template-areas:
             "int_info"
             "int_info2"
             "int_info3"
             "int_info4"
             "int_iframes";
+    }
+
+    .int_info2 {
+        grid-area: int_info2;
+        margin-top: 0;
     }
 }
 
@@ -486,16 +579,9 @@ img {
     grid-template-rows: repeat(2, 0.8fr);
     column-gap: 4rem;
     row-gap: 6rem;
-    margin: 2rem 2rem;
     grid-template-areas:
         "meet_us meet_us meet_us meet_us"
         "mister__hodinka mister__hodinka mister__guardeno mister__guardeno";
-}
-
-.conocenos__school {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .meet_us {
@@ -505,12 +591,27 @@ img {
     grid-area: meet_us;
 }
 
+.meet_us h1 {
+    font-family: var(--Fuente_Titulos);
+    font-size: 3rem;
+    padding: 2rem;
+}
+
 .meet_us p {
+    text-align: center;
     font-family: var(--Fuente_Principal);
+}
+
+.conocenos__school {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
 .mister__hodinka {
     display: flex;
+    flex-direction: column;
     grid-area: mister__hodinka;
     align-items: center;
     gap: 2rem;
@@ -521,13 +622,16 @@ img {
 }
 
 .mister__hodinka h1 {
-    color: #70E000;
-    border: solid 1px black;
-    border-style: dashed;
+    font-family: var(--Fuente_Titulos);
+    align-self: flex-start;
+    font-size: 2rem;
+    padding: 2rem;
 }
 
 .mister__guardeno {
     display: flex;
+    flex-direction: column;
+    margin-top: 8rem;
     grid-area: mister__guardeno;
     align-items: center;
     gap: 2rem;
@@ -567,14 +671,6 @@ img {
             "mister__hodinka mister__guardeno";
     }
 
-    .mister__guardeno {
-        flex-direction: column;
-    }
-
-    .mister__hodinka {
-        flex-direction: column;
-    }
-
     .conocenos__school {
         flex-direction: column;
     }
@@ -600,12 +696,57 @@ img {
             "mister__guardeno";
     }
 
-    .mister__guardeno {
+    .meet_us {
         flex-direction: column;
     }
+}
 
-    .mister__hodinka {
-        flex-direction: column;
+@media (max-width:530px) {
+    .main__conocenos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3, 1fr;
+        margin: 2rem 2rem;
+        grid-template-areas:
+            "meet_us"
+            "mister__hodinka"
+            "mister__guardeno";
+    }
+    .professor_hodinka {
+        max-width: 8rem;
+        max-height: 8rem;
+    }
+    
+    .professor_guardeno {
+        max-width: 8rem;
+        max-height: 8rem;
+    }
+
+    .mister__hodinka p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .mister__guardeno p {
+        font-size: 1rem;  
+        text-align: center;
+    }
+
+    .institute_pic {
+        max-width: 15rem;
+    }
+
+    .classroom_pic {
+        max-width: 15rem;
+    }
+
+    .meet_us p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .meet_us h1 {
+        font-size: 1.5rem;
     }
 
     .meet_us {
@@ -620,7 +761,7 @@ img {
     grid-template-rows: repeat(3, 0.3fr);
     row-gap: 4rem;
     column-gap: 3rem;
-    margin: 2rem 2rem;
+    padding: 4rem;
     grid-template-areas:
         "titulo_staff titulo_staff titulo_staff"
         "teacher_staff1 teacher_staff2 aside_staff"
@@ -629,6 +770,9 @@ img {
 
 .titulo_staff {
     grid-area: titulo_staff;
+    font-family: var(--Fuente_Titulos);
+    font-size: 3rem;
+    padding: 2rem;
 }
 
 .teacher_staff1 {
@@ -728,7 +872,7 @@ img {
     }
 }
 
-@media (max-width: 371px) {
+@media (max-width: 438px) {
     .main_staff {
         display: grid;
         grid-template-columns: 1, 1fr;
@@ -778,65 +922,9 @@ img {
     .aside_staff p {
         font-size: 1rem;
     }
-}
 
-/*VALORES*/
-
-.main__values h1 {
-    font-size: 3rem;
-    margin-top: 3rem;
-    text-align: center;
-    color: #70E000;
-}
-
-.main__values p {
-    font-size: 1.5rem;
-    margin-top: 3rem;
-    text-align: justify;
-    font-family: var(--Fuente_Principal);
-    padding: 2rem;
-    line-height: 2rem;
-}
-
-.valores_green {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 6rem 4rem;
-    gap: 2rem;
-    line-height: 1.8rem;
-    font-size: 1.6rem;
-    font-family: var(--Fuente_Principal);
-    text-align: justify;
-    background-image: linear-gradient(83deg, rgba(0, 0, 0, 0.5802696078431373) 0%, rgba(0, 0, 0, 0.5550595238095238) 100%),
-        url(https://wikieconomica.com/wp-content/uploads/2020/10/1-11.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.valores_green h1 {
-    color: #70E000;
-}
-
-.valores_green ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
-}
-
-.valores_green li {
-    list-style: circle;
-    color: antiquewhite;
-}
-
-@media (max-width:534px) {
-    .valores_green h1 {
-        font-size: 1.4rem;
-    }
-
-    .main__values p {
-        font-size: 1.2rem;
+    .titulo_staff {
+        font-size: 1.5rem;
     }
 }
 
