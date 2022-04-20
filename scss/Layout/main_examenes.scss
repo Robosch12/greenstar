@@ -1,0 +1,126 @@
+/* EXÁMENES */
+.contenedora__exams {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 0.8fr);
+    grid-column-gap: 5rem;
+    grid-row-gap: 5rem;
+    padding: 2rem;
+    grid-template-areas:
+        "int_info int_info2 int_iframes"
+        "int_info3 int_info4 int_iframes";
+
+    h2 {
+        color: #70E000;
+        margin-top: 1rem;
+        background-color: black;
+    }
+
+    p {
+        line-height: 2rem;
+        margin-top: 1rem;
+        font-family: $Fuente_Principal;
+        font-size: 1.3rem;
+    }
+
+    .int_info {
+        grid-area: int_info;
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            font-family: $Fuente_Titulos;
+            padding: 2rem;
+        }
+    }
+
+    .int_info2 {
+        grid-area: int_info2;
+        margin-top: 4rem;
+        img {
+            max-width: 20rem;
+        }
+    }
+
+    .int_info3 {
+        grid-area: int_info3;
+    }
+
+    .int_info4 {
+        grid-area: int_info4;
+    }
+
+    .int_iframes {
+        grid-area: int_iframes;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        h3 {
+            margin: 1rem;
+        }
+        a {
+            color: #70E000;
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+        li:hover {
+            border-bottom: 3px solid black;
+        }
+    }
+}
+
+@media (max-width: 1181px) {
+    .contenedora__exams {
+        display: grid;
+        grid-template-columns: repeat(2, 0.7fr);
+        grid-template-rows: repeat(3, 0.1fr);
+        grid-template-areas:
+            "int_info int_info2"
+            "int_info3 int_info4"
+            ". int_iframes";
+    }
+
+    .cam_int_exams {
+        max-width: 15rem;
+    }
+}
+
+@media (max-width: 973px) {
+    .contenedora__exams {
+        display: grid;
+        grid-template-columns: repeat(2, 0.7fr);
+        grid-template-rows: repeat(3, 0.1fr);
+        grid-template-areas:
+            "int_info int_info2"
+            "int_info3 int_info4"
+            ". int_iframes";
+    }
+
+    .cam_int_exams {
+        max-width: 15rem;
+    }
+}
+
+@media (max-width:800px) {
+    .contenedora__exams {
+        display: grid;
+        grid-template-columns: 1fr;
+        font-size: 1rem;
+        grid-template-rows: repeat(5, 0.3fr);
+        grid-template-areas:
+            "int_info"
+            "int_info2"
+            "int_info3"
+            "int_info4"
+            "int_iframes";
+    }
+
+    .int_info2 {
+        grid-area: int_info2;
+        margin-top: 0;
+    }
+}
+
+
+
+

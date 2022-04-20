@@ -1,7 +1,11 @@
 @import 'Base/variables';
 @import 'Base/globales';
-@import 'Base/mixings';
+@import 'Base/mixins';
 
 @import 'Layout/header.scss';
 @import 'Layout/main_index.scss';
 @import 'Layout/footer';
+@import 'Layout/cursos.scss';
+@import 'Layout/main_examenes.scss';
+@import 'Layout/main_conocenos.scss';
+@import 'Layout/main_contacto.scss';
