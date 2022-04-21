@@ -50,7 +50,7 @@
     padding: 3rem;
     transform: rotate(353deg);
 }
-}
+
 
 @keyframes courses_background {
     30% {
@@ -73,8 +73,7 @@
     }
 }
 
-@media (max-width: 920px) {
-
+@include tabletEspecial {
     .kinder_course,
     .children_course,
     .juniors_course,
@@ -83,7 +82,6 @@
         width: 16rem;
         margin: 0 auto;
     }
-
     .kinder_course,
     .children_course,
     .juniors_course,
@@ -91,14 +89,11 @@
     .adults_course {
         transform: none;
     }
-
     .courses_for_kids {
         flex-direction: column;
     }
 }
-
-@media (max-width: 797px) {
-
+@include lgTablet {
     .kinder_course,
     .children_course,
     .juniors_course,
@@ -106,7 +101,6 @@
     .adults_course {
         width: 19rem;
     }
-
     .kinder_course,
     .children_course,
     .juniors_course,
@@ -115,9 +109,7 @@
         transform: none;
     }
 }
-
-@media (max-width: 378px) {
-
+@include telefono {
     .kinder_course,
     .children_course,
     .juniors_course,
@@ -125,8 +117,8 @@
     .adults_course {
         width: 12rem;
     }
-
     .main__courses h1 {
         font-size: 1.8rem;
     }
+}
 }

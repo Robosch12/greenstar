@@ -2,10 +2,12 @@
 $mediaQ:(
     telefono: 480px, 
     telefono_md: 535px,
+    telefono_lg: 578px,
     tablet: 768px,  
     lgTablet: 790px, 
     tabletEspecial: 898px,
     smDesktop: 990px,
+    mDesktop: 1115px,
     desktop: 1366px, 
 );
 
@@ -16,6 +18,11 @@ $mediaQ:(
 };
 @mixin telefono_md {
     @media (max-width: map-get($mediaQ, telefono_md)) {
+        @content
+    }
+};
+@mixin telefono_lg {
+    @media (max-width: map-get($mediaQ, telefono_lg)) {
         @content
     }
 };
@@ -39,7 +46,12 @@ $mediaQ:(
         @content
     }
 };
-@mixin Desktop {
+@mixin mDesktop {
+    @media (max-width: map-get($mediaQ, mDesktop)) {
+        @content
+    }
+};
+@mixin desktop {
     @media (max-width: map-get($mediaQ, Desktop)) {
         @content
     }

@@ -5,17 +5,15 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-
-    @media (max-width: 976px) {
-        .main__contacto {
+    @include smDesktop {
             flex-direction: column;
             align-items: center;
         }
-    }
 
     .contacto_title {
         color: white;
         margin: 3rem;
+        font-family: $Fuente_Titulos;
     }
 
     .form_contacto {
@@ -38,69 +36,48 @@
         }
 
         .boton_submit {
-            background-color: var(--Color_Two);
+            background-color: $Color_Two;
             color: black;
-            font-family: var(--Fuente_Titulos);
+            font-family: $Fuente_Titulos;
             font-size: 1.2rem;
             padding: 0.5rem;
-
-            .boton:hover {
+            &:hover {
                 cursor: pointer;
             }
         }
     }
 
-    @media (max-width: 560px) {
-        .form_contacto {
+    @include telefono_md {
+            width: 100%;
+            margin: 0;
+    }
+    @include telefono {
             width: 100%;
             margin: 0;
         }
-    }
-    
-    @media (max-width: 315px) {
-        .form_contacto {
-            width: 100%;
-            margin: 0;
-        }
-    }
 
     .map {
         flex-direction: column;
-
         .sede_title {
             color: white;
             margin: 3rem;
+            font-family: $Fuente_Titulos;
         }
-
         .iframe_contacto {
             width: 500px;
             height: 450px;
+            @include smDesktop {
+                    width: 480px;
+                    height: 480px;
+            }
+            @include telefono_md {
+                width: 300px;
+                height: 300px;
+                margin: 0;
+        }
         }
     }
-}
-
-@media (max-width:1200px) {
-    .iframe_contacto {
-        width: 400px;
-        height: 400px;
-        margin-left: 4rem;
     }
-}
-
-@media (max-width:975px) {
-    .iframe_contacto {
-        width: 480px;
-        height: 480px;
-    }
-}
-
-@media (max-width:578px) {
-    .iframe_contacto {
-        width: 300px;
-        height: 300px;
-        margin: 0;
-    }
-}
 
 .contact_us {
     display: flex;
@@ -109,23 +86,20 @@
     background-color: black;
     gap: 2rem;
     padding: 3rem;
-
     .icono_parrafo_contactus {
         display: flex;
         align-items: center;
         gap: 2rem;
         color: #70E000;
     }
-
     .icono_parrafo_contactus .fa-brands,
     .fa-solid {
         font-size: 2rem;
         align-items: center;
     }
+    @include telefono {
+        p {
+            font-size: 1.2rem;
+        }
 }
-
-@media (max-width: 430px) {
-    .icono_parrafo_contactus p {
-        font-size: 1.2rem;
-    }
 }
