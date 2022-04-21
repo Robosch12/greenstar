@@ -66,10 +66,9 @@
             color: #70E000;
             font-size: 1.4rem;
             line-height: 2rem;
-        }
-
-        li:hover {
-            border-bottom: 3px solid black;
+            &:hover {
+                border-bottom: 3px solid black;
+            }
         }
     }
 

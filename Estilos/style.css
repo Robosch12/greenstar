@@ -344,8 +344,8 @@ img {
       color: #70E000;
       font-size: 1.4rem;
       line-height: 2rem; }
-    .contenedora__exams .int_iframes li:hover {
-      border-bottom: 3px solid black; }
+      .contenedora__exams .int_iframes a:hover {
+        border-bottom: 3px solid black; }
   @media (max-width: 1115px) {
     .contenedora__exams {
       display: grid;
@@ -390,6 +390,9 @@ img {
       font-family: "Bubblegum Sans";
       font-size: 4rem;
       padding: 2rem; }
+      @media (max-width: 578px) {
+        .main__conocenos .meet_us h1 {
+          font-size: 1.5rem; } }
     .main__conocenos .meet_us .conocenos__school {
       display: flex;
       justify-content: center;
@@ -397,9 +400,18 @@ img {
       padding: 2rem; }
       .main__conocenos .meet_us .conocenos__school img {
         max-width: 30rem; }
+        @media (max-width: 1115px) {
+          .main__conocenos .meet_us .conocenos__school img {
+            width: 25rem; } }
+        @media (max-width: 480px) {
+          .main__conocenos .meet_us .conocenos__school img {
+            width: 8rem; } }
     .main__conocenos .meet_us p {
       text-align: center;
       font-family: "Josefin Sans"; }
+      @media (max-width: 578px) {
+        .main__conocenos .meet_us p {
+          font-size: 1rem; } }
   .main__conocenos .mister__hodinka {
     display: flex;
     flex-direction: column;
@@ -413,11 +425,21 @@ img {
       font-size: 3rem;
       padding: 2rem;
       text-decoration: overline underline; }
+      @media (max-width: 535px) {
+        .main__conocenos .mister__hodinka h2 {
+          font-size: 1.5rem; } }
     .main__conocenos .mister__hodinka img {
       max-width: 15rem;
       max-height: 15rem; }
+      @media (max-width: 535px) {
+        .main__conocenos .mister__hodinka img {
+          width: 8rem; } }
     .main__conocenos .mister__hodinka p {
       font-family: "Josefin Sans"; }
+      @media (max-width: 535px) {
+        .main__conocenos .mister__hodinka p {
+          font-size: 1rem;
+          text-align: center; } }
   .main__conocenos .mister__guardeno {
     display: flex;
     flex-direction: column;
@@ -429,8 +451,15 @@ img {
     .main__conocenos .mister__guardeno img {
       max-width: 15rem;
       max-height: 15rem; }
+      @media (max-width: 535px) {
+        .main__conocenos .mister__guardeno img {
+          width: 8rem; } }
     .main__conocenos .mister__guardeno p {
       font-family: "Josefin Sans"; }
+      @media (max-width: 535px) {
+        .main__conocenos .mister__guardeno p {
+          font-size: 1rem;
+          text-align: center; } }
   @media (max-width: 1115px) {
     .main__conocenos {
       display: grid;
@@ -439,9 +468,7 @@ img {
       margin: 2rem 2rem;
       grid-template-areas: "meet_us meet_us" "mister__hodinka mister__guardeno" "mister__hodinka mister__guardeno"; }
       .main__conocenos .conocenos__school {
-        flex-direction: column; }
-        .main__conocenos .conocenos__school img {
-          max-width: 25rem; } }
+        flex-direction: column; } }
   @media (max-width: 768px) {
     .main__conocenos {
       display: grid;
@@ -458,27 +485,6 @@ img {
       grid-template-rows: 3, 1fr;
       margin: 2rem 2rem;
       grid-template-areas: "meet_us" "mister__hodinka" "mister__guardeno"; }
-      .main__conocenos .professor_hodinka {
-        max-width: 8rem;
-        max-height: 8rem; }
-      .main__conocenos .professor_guardeno {
-        max-width: 8rem;
-        max-height: 8rem; }
-      .main__conocenos .mister__hodinka p {
-        font-size: 1rem;
-        text-align: center; }
-      .main__conocenos .mister__guardeno p {
-        font-size: 1rem;
-        text-align: center; }
-      .main__conocenos .institute_pic {
-        max-width: 8rem; }
-      .main__conocenos .classroom_pic {
-        max-width: 8rem; }
-      .main__conocenos .meet_us p {
-        font-size: 1rem;
-        text-align: center; }
-      .main__conocenos .meet_us h1 {
-        font-size: 1.5rem; }
       .main__conocenos .meet_us {
         flex-direction: column; } }
 
@@ -497,6 +503,9 @@ img {
     font-size: 3rem;
     padding: 2rem;
     text-decoration: overline underline; }
+    @media (max-width: 578px) {
+      .main_staff .titulo_staff {
+        font-size: 1.5rem; } }
   .main_staff .teacher_staff1 {
     grid-area: teacher_staff1;
     display: flex;
@@ -507,6 +516,9 @@ img {
     .main_staff .teacher_staff1 img {
       max-width: 13rem;
       padding: 2rem; }
+      @media (max-width: 578px) {
+        .main_staff .teacher_staff1 img {
+          max-width: 8rem; } }
   .main_staff .teacher_staff2 {
     grid-area: teacher_staff2;
     display: flex;
@@ -518,6 +530,9 @@ img {
     .main_staff .teacher_staff2 img {
       max-width: 13rem;
       padding: 2rem; }
+      @media (max-width: 578px) {
+        .main_staff .teacher_staff2 img {
+          max-width: 8rem; } }
   .main_staff .teacher_staff3 {
     grid-area: teacher_staff3;
     display: flex;
@@ -529,6 +544,9 @@ img {
     .main_staff .teacher_staff3 img {
       max-width: 13rem;
       padding: 2rem; }
+      @media (max-width: 578px) {
+        .main_staff .teacher_staff3 img {
+          max-width: 8rem; } }
   .main_staff .teacher_staff4 {
     grid-area: teacher_staff4;
     display: flex;
@@ -540,6 +558,9 @@ img {
     .main_staff .teacher_staff4 img {
       max-width: 13rem;
       padding: 2rem; }
+      @media (max-width: 578px) {
+        .main_staff .teacher_staff4 img {
+          max-width: 8rem; } }
   .main_staff .aside_staff {
     grid-area: aside_staff;
     display: flex;
@@ -560,6 +581,9 @@ img {
       padding: 2rem 2rem; }
     .main_staff .aside_staff p {
       font-family: "Josefin Sans"; }
+      @media (max-width: 578px) {
+        .main_staff .aside_staff p {
+          font-size: 1rem; } }
   @media (max-width: 1115px) {
     .main_staff {
       display: grid;
@@ -591,8 +615,6 @@ img {
       column-gap: 3rem;
       margin: 2rem 2rem;
       grid-template-areas: "titulo_staff" "teacher_staff1" "teacher_staff2" "teacher_staff3" "teacher_staff4" "aside_staff"; }
-      .main_staff .teacher1 {
-        max-width: 8rem; }
       .main_staff .teacher_emoji {
         max-width: 5rem; }
       .main_staff .aside_staff {
@@ -606,11 +628,7 @@ img {
       .main_staff .teacher_staff3 p {
         font-size: 1rem; }
       .main_staff .teacher_staff4 p {
-        font-size: 1rem; }
-      .main_staff .aside_staff p {
-        font-size: 1rem; }
-      .main_staff .titulo_staff {
-        font-size: 1.5rem; } }
+        font-size: 1rem; } }
 
 .main__contacto {
   background-image: linear-gradient(83deg, rgba(0, 0, 0, 0.58027) 0%, rgba(0, 0, 0, 0.55506) 100%), url(https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);

@@ -17,6 +17,9 @@
             font-family: $Fuente_Titulos;
             font-size: 4rem;
             padding: 2rem;
+            @include telefono_lg {
+                font-size: 1.5rem;
+            }
         }
         .conocenos__school {
             display: flex;
@@ -25,11 +28,20 @@
             padding: 2rem;
             img {
                 max-width: 30rem;
+                @include mDesktop {
+                    width: 25rem;
+                }
+                @include telefono {
+                    width: 8rem;
+                }
             }
         }
         p {
             text-align: center;
             font-family: $Fuente_Principal;
+            @include telefono_lg {
+                font-size: 1rem;
+            }
         }
     }
 
@@ -46,13 +58,23 @@
             font-size: 3rem;
             padding: 2rem;
             text-decoration: overline underline;
+            @include telefono_md {
+                font-size: 1.5rem;
+            }
         }
         img {
             max-width: 15rem;
             max-height: 15rem;
+            @include telefono_md{
+                width: 8rem;
+            }
         }
         p {
             font-family: $Fuente_Principal;
+            @include telefono_md {
+                font-size: 1rem;
+                text-align: center;
+            }
         }
     }
 
@@ -67,9 +89,16 @@
         img {
             max-width: 15rem;
             max-height: 15rem;
+            @include telefono_md {
+                width: 8rem;
+            }
         }
         p {
             font-family: $Fuente_Principal;
+            @include telefono_md {
+                font-size: 1rem;
+                text-align: center;
+            }
         }
     }
 
@@ -84,9 +113,6 @@
             "mister__hodinka mister__guardeno";
         .conocenos__school {
             flex-direction: column;
-        img {
-            max-width: 25rem;
-        }
 }
 }
 
@@ -103,6 +129,7 @@
         flex-direction: column;
     }
 }
+
 @include telefono_lg {
     display: grid;
     grid-template-columns: 1fr;
@@ -112,35 +139,6 @@
         "meet_us"
         "mister__hodinka"
         "mister__guardeno";
-.professor_hodinka {
-    max-width: 8rem;
-    max-height: 8rem;
-}
-.professor_guardeno {
-    max-width: 8rem;
-    max-height: 8rem;
-}
-.mister__hodinka p {
-    font-size: 1rem;
-    text-align: center;
-}
-.mister__guardeno p {
-    font-size: 1rem;
-    text-align: center;
-}
-.institute_pic {
-    max-width: 8rem;
-}
-.classroom_pic {
-    max-width: 8rem;
-}
-.meet_us p {
-    font-size: 1rem;
-    text-align: center;
-}
-.meet_us h1 {
-    font-size: 1.5rem;
-}
 .meet_us {
     flex-direction: column;
 }
@@ -166,6 +164,9 @@
         font-size: 3rem;
         padding: 2rem;
         text-decoration: overline underline;
+        @include telefono_lg {
+            font-size: 1.5rem;
+        }
     }
 
     .teacher_staff1 {
@@ -178,6 +179,9 @@
         img {
             max-width: 13rem;
             padding: 2rem;
+            @include telefono_lg {
+                max-width: 8rem;
+            }
             }
     }
 
@@ -192,6 +196,9 @@
         img {
             max-width: 13rem;
             padding: 2rem;
+            @include telefono_lg {
+                max-width: 8rem;
+            }
             }
     }
 
@@ -206,6 +213,9 @@
         img {
             max-width: 13rem;
             padding: 2rem;
+            @include telefono_lg {
+                max-width: 8rem;
+            }
             }
     }
 
@@ -220,6 +230,9 @@
         img {
         max-width: 13rem;
         padding: 2rem;
+        @include telefono_lg {
+            max-width: 8rem;
+        }
         }
         }
 
@@ -245,6 +258,9 @@
         }
         p {
             font-family: $Fuente_Principal;
+            @include telefono_lg {
+                font-size: 1rem;
+            }
         }
     }
 
@@ -296,43 +312,25 @@
         "teacher_staff3"
         "teacher_staff4"
         "aside_staff";
-
-.teacher1 {
-    max-width: 8rem;
-}
-
 .teacher_emoji {
     max-width: 5rem;
 }
-
 .aside_staff {
     height: 100%;
     background: none;
     border: none;
 }
-
 .teacher_staff1 p {
     font-size: 1rem;
 }
-
 .teacher_staff2 p {
     font-size: 1rem;
 }
-
 .teacher_staff3 p {
     font-size: 1rem;
 }
-
 .teacher_staff4 p {
     font-size: 1rem;
-}
-
-.aside_staff p {
-    font-size: 1rem;
-}
-
-.titulo_staff {
-    font-size: 1.5rem;
 }
 }
 }
