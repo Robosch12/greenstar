@@ -258,8 +258,12 @@
         }
         p {
             font-family: $Fuente_Principal;
+            text-align: center;
             @include telefono_lg {
                 font-size: 1rem;
+            }
+            span {
+                font-family: Verdana;
             }
         }
     }

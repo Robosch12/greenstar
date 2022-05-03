@@ -8,3 +8,11 @@ $Color_Two: #70E000;
     flex-direction: column;
     align-items: center;
 }
+.nivel_lectura {
+    background-color: #ffff6a;
+    font-style: italic;
+}
+.nivel_lectura2 {
+    text-decoration: underline $Color_Two;
+    font-style: italic;
+}
