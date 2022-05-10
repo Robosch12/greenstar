@@ -67,40 +67,81 @@ img {
       padding-top: 1rem; } }
 
 /* NAV */
-.menu {
+nav {
+  background: black;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); }
+
+.nav-header {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: black;
   padding: 1rem; }
-  @media (max-width: 990px) {
-    .menu {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center; } }
-  .menu .header__logo {
-    height: 8rem;
-    width: 8rem;
-    background-color: black; }
-  .menu .nav__list {
+
+.icons8-menu {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMjQiIGhlaWdodD0iMjQiCnZpZXdCb3g9IjAgMCAyNCAyNCIKc3R5bGU9IiBmaWxsOiNmZmZmZmY7Ij48cGF0aCBkPSJNIDIgNSBMIDIgNyBMIDIyIDcgTCAyMiA1IEwgMiA1IHogTSAyIDExIEwgMiAxMyBMIDIyIDEzIEwgMjIgMTEgTCAyIDExIHogTSAyIDE3IEwgMiAxOSBMIDIyIDE5IEwgMjIgMTcgTCAyIDE3IHoiPjwvcGF0aD48L3N2Zz4=") 50% 50% no-repeat;
+  background-size: 100%; }
+
+.nav-toggle {
+  font-size: 1.5rem;
+  color: #25bb32;
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer; }
+
+.nav-toggle:hover {
+  color: #25bb32;
+  transform: rotate(90deg); }
+
+.logo {
+  height: 100px; }
+
+.links a {
+  color: white;
+  font-size: 1rem;
+  text-transform: capitalize;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s linear; }
+
+.links a:hover {
+  background: #25bb32;
+  padding-left: 1.5rem; }
+
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear; }
+
+.show-links {
+  height: 13rem;
+  line-height: 1.5rem; }
+
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
     display: flex;
-    gap: 4rem;
-    font-size: 1rem; }
-    .menu .nav__list li:hover {
-      border-bottom: 3px solid #70E000; }
-    .menu .nav__list .icons8-menu {
-      display: inline-block;
-      width: 24px;
-      height: 24px;
-      background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMjQiIGhlaWdodD0iMjQiCnZpZXdCb3g9IjAgMCAyNCAyNCIKc3R5bGU9IiBmaWxsOiNmZmZmZmY7Ij48cGF0aCBkPSJNIDIgNSBMIDIgNyBMIDIyIDcgTCAyMiA1IEwgMiA1IHogTSAyIDExIEwgMiAxMyBMIDIyIDEzIEwgMjIgMTEgTCAyIDExIHogTSAyIDE3IEwgMiAxOSBMIDIyIDE5IEwgMjIgMTcgTCAyIDE3IHoiPjwvcGF0aD48L3N2Zz4=") 50% 50% no-repeat;
-      background-size: 100%;
-      cursor: pointer;
-      display: none; }
-    @media (max-width: 990px) {
-      .menu .nav__list {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; } }
+    align-items: center;
+    justify-content: center;
+    padding: 1rem; }
+  .nav-header {
+    padding: 0; }
+  .nav-toggle {
+    display: none; }
+  .links {
+    height: auto;
+    display: flex; }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem; }
+  .links a:hover {
+    border-bottom: 1px solid green;
+    padding: 0;
+    background: transparent; } }
 
 /* Whatsapp sticky logo */
 .whatsapp__logo img {
@@ -125,7 +166,7 @@ img {
     transition: all 3s; }
     .main__index .inscripciones:hover {
       width: 60%; }
-    @media (max-width: 768px) {
+    @media (max-width: 898px) {
       .main__index .inscripciones {
         width: 100%;
         transition: none; } }

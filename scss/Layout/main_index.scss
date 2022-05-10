@@ -12,7 +12,7 @@
         &:hover{
             width: 60%;
         }
-        @include tablet {
+        @include tabletEspecial {
             width: 100%;
             transition: none;
         }
