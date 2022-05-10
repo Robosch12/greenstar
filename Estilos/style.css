@@ -286,10 +286,10 @@ nav {
 
 /* CURSOS */
 .main__courses {
-  animation-name: courses_background;
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite; }
+  animation: courses_background 10s linear infinite; }
+  @media (max-width: 790px) {
+    .main__courses {
+      animation: none; } }
   .main__courses h1 {
     font-size: 4rem;
     text-align: start;
